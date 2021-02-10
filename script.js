@@ -2,9 +2,12 @@
 
 window.addEventListener("DOMContentLoaded", loop);
 
+//The two variables: the array and the counter (only one of them can be a let-variable)
 const arr = [];
 let counting = 0;
 
+//Only one function (loop)
+//The unshift() method adds one or more elements to the beginning of the array and return the new lenght
 function loop() {
   arr.unshift(counting);
   counting++;
@@ -12,7 +15,9 @@ function loop() {
     arr.pop(arr);
   }
 
-  setTimeout(loop, 500);
+  //Counts with a timed delay, here 1second
+  setTimeout(loop, 1000);
 
+  //The array is logged to the console
   console.log(arr);
 }
